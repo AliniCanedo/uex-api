@@ -1,5 +1,9 @@
 class Address < ApplicationRecord
   belongs_to :contact
+  has_one :map, dependent: :destroy
 
-  has_one :map
+  validates :uf, presence: true
+  validates :city, presence: true
+  validates :street, presence: true
+  validates :cep, presence: true
 end

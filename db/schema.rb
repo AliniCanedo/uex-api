@@ -36,8 +36,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_13_234423) do
 
   create_table "maps", force: :cascade do |t|
     t.integer "address_id", null: false
-    t.decimal "latitude"
-    t.decimal "longitude"
+    t.decimal "latitude", precision: 10, scale: 6
+    t.decimal "longitude", precision: 10, scale: 6
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["address_id"], name: "index_maps_on_address_id"
