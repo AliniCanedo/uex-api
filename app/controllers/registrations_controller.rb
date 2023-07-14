@@ -4,7 +4,7 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     user = User.new(sign_up_params)  
 
-    return render json: { success: true, message: 'Usuário criado com sucesso' } if user.save
+    return render json: { success: true, message: t('json.user_created_success') } if user.save
 
     render json: { success: false, errors: user.errors }, status: :unprocessable_entity
   end

@@ -1,0 +1,20 @@
+en:
+  activerecord:
+    models:
+      contact: "Contact"
+    attributes:
+      contact:
+        name: "Name"
+        cpf: "CPF"
+        phone: "Phone"
+    errors:
+      models:
+        contact:
+          attributes:
+            name:
+              blank: "Can't be blank"
+            cpf:
+              blank: "Can't be blank"
+              taken: "Has already been taken"
+            phone:
+              blank: "Can't be blank"

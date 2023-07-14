@@ -1,0 +1,25 @@
+pt-BR:
+  activerecord:
+    models:
+      address: "Endereço"
+    attributes:
+      address:
+        uf: "Estado"
+        city: "Cidade"
+        street: "Rua"
+        cep: "CEP"
+        number: "Número"
+    errors:
+      models:
+        address:
+          attributes:
+            uf:
+              blank: "Não pode ficar em branco"
+            city:
+              blank: "Não pode ficar em branco"
+            street:
+              blank: "Não pode ficar em branco"
+            cep:
+              blank: "Não pode ficar em branco"
+            number:
+              blank: "Não pode ficar em branco"

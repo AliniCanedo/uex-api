@@ -1,0 +1,30 @@
+pt-BR:
+  activerecord:
+    models:
+      user: "Usuário"
+    attributes:
+      user:
+        name: "Nome"
+        email: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirme sua senha"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Não pode ficar em branco"
+            email:
+              blank: "Não pode ficar em branco"
+              invalid: "Não é válido"
+            password:
+              confirmation: "Não coincide com a senha"
+            password_digest:
+              blank: "Não pode ficar em branco"
+              too_short: "É muito curta (mínimo é %{count} caracteres)"
+            password_confirmation:
+              confirmation: "Não coincide com a senha"
+  json:
+    user_created_success: "Usuário criado com sucesso."
+    logout_success: "Logout realizado com sucesso."
+    logout_error: "Erro ao realizar o logout."

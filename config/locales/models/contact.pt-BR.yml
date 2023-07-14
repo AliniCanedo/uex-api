@@ -1,0 +1,20 @@
+pt-BR:
+  activerecord:
+    models:
+      contact: "Contato"
+    attributes:
+      contact:
+        name: "Nome"
+        cpf: "CPF"
+        phone: "Telefone"
+    errors:
+      models:
+        contact:
+          attributes:
+            name:
+              blank: "Não pode ficar em branco"
+            cpf:
+              blank: "Não pode ficar em branco"
+              taken: "Já está em uso"
+            phone:
+              blank: "Não pode ficar em branco"

@@ -1,0 +1,25 @@
+en:
+  activerecord:
+    models:
+      address: "Address"
+    attributes:
+      address:
+        uf: "State"
+        city: "City"
+        street: "Street"
+        cep: "ZIP Code"
+        number: "Number"
+    errors:
+      models:
+        address:
+          attributes:
+            uf:
+              blank: "Can't be blank"
+            city:
+              blank: "Can't be blank"
+            street:
+              blank: "Can't be blank"
+            cep:
+              blank: "Can't be blank"
+            number:
+              blank: "Can't be blank"

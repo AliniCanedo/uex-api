@@ -205,6 +205,7 @@ DEPENDENCIES
   debug
   devise
   factory_bot_rails
+  i18n (~> 1.14, >= 1.14.1)
   puma (~> 5.0)
   rails (~> 7.0.6)
   rspec-rails

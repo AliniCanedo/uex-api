@@ -1,0 +1,30 @@
+en:
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Confirm Password"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Can't be blank"
+            email:
+              blank: "Can't be blank"
+              invalid: "Is invalid"
+            password:
+              confirmation: "doesn't match the password"
+            password_digest:
+              blank: "Can't be blank"
+              too_short: "Is too short (minimum is %{count} characters)"
+            password_confirmation:
+              confirmation: "Doesn't match the password"
+  json:
+    user_created_success: "User created successfully."
+    logout_success: "Logout successfully."
+    logout_error: "Error occurred while logging out."

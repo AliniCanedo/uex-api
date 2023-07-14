@@ -36,5 +36,7 @@ module UexApi
     end
 
     config.middleware.use ActionDispatch::Session::CookieStore
+
+    config.i18n.default_locale = :'pt-BR'
   end
 end
