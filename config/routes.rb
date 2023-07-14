@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users, controllers: {
     registrations: 'registrations',
     sessions: 'sessions'
@@ -13,4 +14,5 @@ Rails.application.routes.draw do
 
   resources :contacts
   get '/search-address/:cep', to: 'addresses#search_address'
+
 end

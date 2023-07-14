@@ -2,7 +2,7 @@ class RegistrationsController < Devise::RegistrationsController
   before_action :authenticate_user!
 
   def create
-    user = User.new(sign_up_params)  
+    user = User.new(sign_up_params)
 
     return render json: { success: true, message: I18n.t('json.user_created_success') } if user.save
 

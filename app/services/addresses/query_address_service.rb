@@ -4,6 +4,6 @@ class Addresses::QueryAddressService < ApplicationService
   end
 
   def call
-    ::Addresses::ApiViaCep.new(@options).address 
+    ::Addresses::ApiViaCep.new(@options).address
   end
 end

@@ -1,4 +1,4 @@
-class User < ApplicationRecord  
+class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -16,8 +16,10 @@ class User < ApplicationRecord
 
   def generate_authentication_token
     loop do
+
       token = Devise.friendly_token
       break token unless User.exists?(authentication_token: token)
+
     end
   end
 end

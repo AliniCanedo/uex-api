@@ -10,54 +10,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_14_014135) do
-  create_table "addresses", force: :cascade do |t|
-    t.integer "contact_id", null: false
-    t.string "uf"
-    t.string "city"
-    t.string "street"
-    t.string "cep"
-    t.string "complement"
-    t.string "number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["contact_id"], name: "index_addresses_on_contact_id"
+ActiveRecord::Schema[7.0].define(version: 20_230_714_014_135) do
+
+  create_table 'addresses', force: :cascade do |t|
+
+    t.integer 'contact_id', null: false
+    t.string 'uf'
+    t.string 'city'
+    t.string 'street'
+    t.string 'cep'
+    t.string 'complement'
+    t.string 'number'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['contact_id'], name: 'index_addresses_on_contact_id'
+
   end
 
-  create_table "contacts", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.string "name"
-    t.string "cpf"
-    t.string "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_contacts_on_user_id"
+  create_table 'contacts', force: :cascade do |t|
+
+    t.integer 'user_id', null: false
+    t.string 'name'
+    t.string 'cpf'
+    t.string 'phone'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['user_id'], name: 'index_contacts_on_user_id'
+
   end
 
-  create_table "maps", force: :cascade do |t|
-    t.integer "address_id", null: false
-    t.decimal "latitude", precision: 10, scale: 6
-    t.decimal "longitude", precision: 10, scale: 6
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["address_id"], name: "index_maps_on_address_id"
+  create_table 'maps', force: :cascade do |t|
+
+    t.integer 'address_id', null: false
+    t.decimal 'latitude', precision: 10, scale: 6
+    t.decimal 'longitude', precision: 10, scale: 6
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['address_id'], name: 'index_maps_on_address_id'
+
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.string "authentication_token"
-    t.index ["authentication_token"], name: "index_users_on_authentication_token"
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  create_table 'users', force: :cascade do |t|
+
+    t.string 'name'
+    t.string 'email'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.string 'encrypted_password', default: '', null: false
+    t.string 'reset_password_token'
+    t.datetime 'reset_password_sent_at'
+    t.datetime 'remember_created_at'
+    t.string 'authentication_token'
+    t.index ['authentication_token'], name: 'index_users_on_authentication_token'
+    t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
+
   end
 
-  add_foreign_key "addresses", "contacts"
-  add_foreign_key "contacts", "users"
-  add_foreign_key "maps", "addresses"
+  add_foreign_key 'addresses', 'contacts'
+  add_foreign_key 'contacts', 'users'
+  add_foreign_key 'maps', 'addresses'
+
 end

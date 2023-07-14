@@ -1,0 +1,17 @@
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/ClassLength:
+  Max: 100
+
+Layout/EmptyLinesAroundBlockBody:
+  EnforcedStyle: empty_lines
+  AllowEmptyLinesAroundAccessModifier: true
+  AllowEmptyLinesAfterClassHeader: 2
+  AllowEmptyLinesAfterModuleHeader: 2
+
+Metrics/LineLength:
+  Max: 120

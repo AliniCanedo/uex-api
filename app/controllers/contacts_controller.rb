@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  before_action :set_contact, only: [:show, :update, :destroy]
+  before_action :set_contact, only: %i[show update destroy]
 
   def index
     @contacts = Contact.all
@@ -37,7 +37,8 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:name, :cpf, :phone, :user_id, address_attributes: [:uf, :city, :street, :cep, :number, map_attributes: [:latitude, :longitude]])
+    params.require(:contact).permit(:name, :cpf, :phone, :user_id,
+                                    address_attributes: [:uf, :city, :street, :cep, :number, { map_attributes: %i[latitude longitude] }])
   end
 
   def set_contact

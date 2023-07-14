@@ -1,6 +1,6 @@
 module Addresses
   class ApiViaCep
-    VIACEP_API = ENV.fetch("VIACEP_API", "")
+    VIACEP_API = ENV.fetch('VIACEP_API', '')
 
     def initialize(options)
       @options = options

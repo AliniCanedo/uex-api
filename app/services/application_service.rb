@@ -5,7 +5,7 @@ class ApplicationService
     new(*args, &block).call
   end
 
-  def t(key, params={})
+  def t(key, params = {})
     I18n.t("services.#{service_name}.#{key}", params)
   end
 
