@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   delete 'logout', to: 'sessions#destroy', as: :logout
+
+  resources :contacts
 end

@@ -18,3 +18,9 @@ pt-BR:
               taken: "Já está em uso"
             phone:
               blank: "Não pode ficar em branco"
+            user:
+              required: "Não pode ficar em branco"
+  json:
+    contact_created_success: "Contato criado com sucesso."
+    contact_updated_success: "Contato atualizado com sucesso."
+    contact_destroyed_success: "Contato excluído com sucesso."

@@ -4,9 +4,9 @@ class SessionsController < Devise::SessionsController
   def destroy
     signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
 
-    return render json: { message: t('json.logout_success') } if signed_out
+    return render json: { message: I18n.t('json.logout_success') } if signed_out
 
-    render json: { error: t('json.logout_error') }, status: :unprocessable_entity
+    render json: { error: I18n.t('json.logout_error') }, status: :unprocessable_entity
   end
 
   private

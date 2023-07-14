@@ -18,3 +18,9 @@ en:
               taken: "Has already been taken"
             phone:
               blank: "Can't be blank"
+            user:
+              required: "Can't be blank"
+  json:
+    contact_created_success: "Contact created successfully."
+    contact_updated_success: "Contact updated successfully."
+    contact_destroyed_success: "Contact deleted successfully."
