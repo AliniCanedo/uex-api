@@ -55,6 +55,7 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'shoulda'
   gem 'shoulda-matchers'
+  gem 'faker'
 end
 
 group :development do

@@ -1,15 +1,11 @@
 FactoryBot.define do
-
   factory :address do
-
-    uf { 'UF' }
-    city { 'Cidade' }
-    street { 'Rua' }
-    cep { 'CEP' }
-    complement { 'Complemento' }
-    number { '123' }
+    uf { Faker::Address.state_abbr }
+    city { Faker::Address.city }
+    street { Faker::Address.street_name }
+    cep { Faker::Address.zip_code }
+    complement { Faker::Address.secondary_address }
+    number { Faker::Address.building_number }
     association :contact
-
   end
-
 end

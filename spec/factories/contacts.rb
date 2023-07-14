@@ -1,12 +1,8 @@
 FactoryBot.define do
-
   factory :contact do
-
-    name { 'Jane Smith' }
-    cpf { '12345678901' }
-    phone { '987654321' }
+    name { Faker::Name.name }
+    cpf { Faker::IDNumber.brazilian_citizen_number }
+    phone { Faker::PhoneNumber.phone_number }
     association :user
-
   end
-
 end
