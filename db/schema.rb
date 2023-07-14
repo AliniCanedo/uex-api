@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_14_011024) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_14_014135) do
   create_table "addresses", force: :cascade do |t|
     t.integer "contact_id", null: false
     t.string "uf"
@@ -52,6 +52,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_14_011024) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "authentication_token"
+    t.index ["authentication_token"], name: "index_users_on_authentication_token"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
