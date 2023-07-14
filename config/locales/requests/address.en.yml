@@ -1,0 +1,5 @@
+en:
+  requests:
+    address:
+      invalid_request: "Invalid request"
+      geocode_failed: "Failed to geocode address"

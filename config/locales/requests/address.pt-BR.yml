@@ -1,0 +1,5 @@
+pt-BR:
+  requests:
+    address:
+      invalid_request: "Requisição inválida"
+      geocode_failed: "Falha ao obter as coordenadas do endereço"
