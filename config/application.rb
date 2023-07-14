@@ -34,5 +34,7 @@ module UexApi
                        request_specs: false
       g.factory_bot dir: "spec/factories"
     end
+
+    config.middleware.use ActionDispatch::Session::CookieStore
   end
 end
