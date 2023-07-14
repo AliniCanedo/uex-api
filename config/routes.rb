@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy', as: :logout
 
   resources :contacts
+  get '/search-address/:cep', to: 'addresses#search_address'
 end

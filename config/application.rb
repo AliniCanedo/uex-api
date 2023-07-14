@@ -38,5 +38,7 @@ module UexApi
     config.middleware.use ActionDispatch::Session::CookieStore
 
     config.i18n.default_locale = :'pt-BR'
+
+    config.autoload_paths << Rails.root.join('lib')
   end
 end
