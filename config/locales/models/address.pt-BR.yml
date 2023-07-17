@@ -9,17 +9,20 @@ pt-BR:
         street: "Rua"
         cep: "CEP"
         number: "Número"
+        neighborhood: "Bairro"
     errors:
       models:
         address:
           attributes:
             uf:
-              blank: "Estado Não pode ficar em branco"
+              blank: "Estado não pode ficar em branco"
             city:
-              blank: "Cidade Não pode ficar em branco"
+              blank: "Cidade não pode ficar em branco"
             street:
-              blank: "Rua Não pode ficar em branco"
+              blank: "Rua não pode ficar em branco"
             cep:
-              blank: "CEP Não pode ficar em branco"
+              blank: "CEP não pode ficar em branco"
             number:
-              blank: "number Não pode ficar em branco"
+              blank: "Número não pode ficar em branco"
+            neighborhood:
+              blank: "Bairro não pode ficar em branco"

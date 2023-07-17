@@ -1,24 +1,38 @@
-# README
+UEX Contacts
+This project is a demonstration of contact book.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Setup Guide
+Follow the steps below to set up the environment for this project using Docker Compose.
 
-Things you may want to cover:
+Prerequisites
+Before proceeding with the setup, make sure you have the following installed:
 
-* Ruby version
+Docker
+Docker Compose or just clone the project run bundle install and then rails db:create db:migrate and rails server
+Step 1: Clone the Repository
+Clone the repository to your local machine using the following command:
 
-* System dependencies
+git clone https://github.com/AliniCanedo/uex-api.git
+Step 2: Configure the Environment Variables
+Create a .env file in the project root directory and provide the necessary environment variables. You can use the .env.example file as a template.
 
-* Configuration
+Step 3: Build the Docker Images
+Build the Docker images for the project using the following command:
 
-* Database creation
+docker-compose build
+Step 4: Install Dependencies
 
-* Database initialization
+Step 5: Start the Application
+Start the application by running the following command:
 
-* How to run the test suite
+docker-compose up || docker-compose up -d app
+Step 6: Access the Application
+Access the application by navigating to http://localhost:3000 in your web browser.
 
-* Services (job queues, cache servers, search engines, etc.)
+Step 7: Postman's Collection
+Here is the Postman collection containing the example API calls
 
-* Deployment instructions
+Run in Postman
 
-* ...
+Step 8: Running Tests
+bundle exec rspec
