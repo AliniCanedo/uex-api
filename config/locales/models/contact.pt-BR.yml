@@ -12,14 +12,14 @@ pt-BR:
         contact:
           attributes:
             name:
-              blank: "Não pode ficar em branco"
+              blank: "Nome Não pode ficar em branco"
             cpf:
-              blank: "Não pode ficar em branco"
-              taken: "Já está em uso"
+              blank: "CPF Não pode ficar em branco"
+              taken: "CPF Já está em uso"
             phone:
-              blank: "Não pode ficar em branco"
+              blank: "Telefone Não pode ficar em branco"
             user:
-              required: "Não pode ficar em branco"
+              required: "Usuário não pode ficar em branco"
   json:
     contact_created_success: "Contato criado com sucesso."
     contact_updated_success: "Contato atualizado com sucesso."

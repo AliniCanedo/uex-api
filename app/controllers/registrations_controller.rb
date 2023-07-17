@@ -1,6 +1,4 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_action :authenticate_user!
-
   def create
     user = User.new(sign_up_params)
 
@@ -13,5 +11,13 @@ class RegistrationsController < Devise::RegistrationsController
 
   def sign_up_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+  def authenticate_token!
+    authorization_header = request.headers['Authorization']
+
+    return render json: { error: 'Missing token' }, status: :unauthorized if authorization_header == 'null'
+
+    @current_user = User.find_by(authentication_token: authorization_header)
   end
 end

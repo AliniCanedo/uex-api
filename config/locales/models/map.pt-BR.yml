@@ -1,0 +1,17 @@
+pt-BR:
+  activerecord:
+    models:
+      map: "MAPA"
+    attributes:
+      map:
+        longitude: "Longitude"
+        latitude: "Latitude"
+    errors:
+      models:
+        map:
+          attributes:
+            longitude:
+              blank: "Longitude Não pode ficar em branco"
+            latitude:
+              blank: "Latitude Não pode ficar em branco"
+

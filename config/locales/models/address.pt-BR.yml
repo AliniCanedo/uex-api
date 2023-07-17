@@ -14,12 +14,12 @@ pt-BR:
         address:
           attributes:
             uf:
-              blank: "Não pode ficar em branco"
+              blank: "Estado Não pode ficar em branco"
             city:
-              blank: "Não pode ficar em branco"
+              blank: "Cidade Não pode ficar em branco"
             street:
-              blank: "Não pode ficar em branco"
+              blank: "Rua Não pode ficar em branco"
             cep:
-              blank: "Não pode ficar em branco"
+              blank: "CEP Não pode ficar em branco"
             number:
-              blank: "Não pode ficar em branco"
+              blank: "number Não pode ficar em branco"

@@ -13,18 +13,24 @@ pt-BR:
         user:
           attributes:
             name:
-              blank: "Não pode ficar em branco"
+              blank: "Nome Não pode ficar em branco"
             email:
-              blank: "Não pode ficar em branco"
-              invalid: "Não é válido"
+              blank: "E-mail Não pode ficar em branco"
+              invalid: "E-mail Não é válido"
+              taken: "E-mail já está em uso"
             password:
               confirmation: "Não coincide com a senha"
             password_digest:
               blank: "Não pode ficar em branco"
               too_short: "É muito curta (mínimo é %{count} caracteres)"
             password_confirmation:
-              confirmation: "Não coincide com a senha"
+              confirmation: "As senhas não coincidem"
+            
   json:
     user_created_success: "Usuário criado com sucesso."
     logout_success: "Logout realizado com sucesso."
     logout_error: "Erro ao realizar o logout."
+    user_update_success: "Usuário atualizado com sucesso."
+    user_update_error: "Erro ao atualizar seu cadastro."
+    user_destroy_success: "Usuário excluído com sucesso."
+    user_destroy_error: "Erro ao excluir usuário."

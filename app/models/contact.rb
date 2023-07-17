@@ -6,6 +6,6 @@ class Contact < ApplicationRecord
   accepts_nested_attributes_for :address
 
   validates :name, presence: true
-  validates :cpf, presence: true, uniqueness: { scope: :user_id }
+  validates :cpf, presence: true, uniqueness: true
   validates :phone, presence: true
 end

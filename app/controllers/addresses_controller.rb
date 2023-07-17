@@ -1,12 +1,18 @@
 class AddressesController < ApplicationController
   def search_address
-    result = ::Addresses::QueryAddressService.new(payload: params[:cep]).call
+    result = ::Addresses::QueryAddressService.new(payload: params[:cep].gsub('-', '')).call
     if result[:status] == 200
       address_data = result[:body]
       process_address_data(address_data)
     else
       render json: { error: I18n.t('requests.address.invalid_request') }, status: :unprocessable_entity
     end
+  end
+
+  def address
+    result = ::Addresses::AddressService.new(payload: params[:address]).call
+
+    render json: result
   end
 
   private

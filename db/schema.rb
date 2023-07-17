@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_230_714_014_135) do
+ActiveRecord::Schema[7.0].define(version: 20_230_715_212_217) do
 
   create_table 'addresses', force: :cascade do |t|
 
@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 20_230_714_014_135) do
     t.string 'number'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
+    t.string 'neighborhood'
     t.index ['contact_id'], name: 'index_addresses_on_contact_id'
 
   end

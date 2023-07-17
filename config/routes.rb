@@ -14,5 +14,10 @@ Rails.application.routes.draw do
 
   resources :contacts
   get '/search-address/:cep', to: 'addresses#search_address'
+  get '/location-by-address/:address', to: 'addresses#location_by_address'
+  post '/address', to: 'addresses#address'
+  get '/user', to: 'users#show'
+  patch '/user', to: 'users#update'
+  delete '/user', to: 'users#destroy'
 
 end
