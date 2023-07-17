@@ -3,12 +3,12 @@ class UsersController < ApplicationController
     render json: { user: { name: @current_user.name, email: @current_user.email } }
   end
 
-  def update
+  def update    
     user = User.find(@current_user.id)
 
     user.update(user_params)
 
-    return render json: { message: I18n.t('json.user_update_success') } if user.update(contact_params)
+    return render json: { message: I18n.t('json.user_update_success') } if user.update(user_params)
 
     render json: { error: I18n.t('json.user_update_error') }, status: :unprocessable_entity
   end

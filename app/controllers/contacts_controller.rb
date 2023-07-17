@@ -20,7 +20,7 @@ class ContactsController < ApplicationController
     end
   end
 
-  def update
+  def update    
     @contact = Contact.find(params[:id])
 
     return render json: { message: I18n.t('json.contact_updated_success') } if @contact.update(contact_params)

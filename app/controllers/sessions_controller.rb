@@ -8,7 +8,7 @@ class SessionsController < Devise::SessionsController
       sign_in(user)
       render json: { token: user.authentication_token, current_user: user }
     else
-      render json: { errors: 'Credenciais inválidas' }, status: :unprocessable_entity
+      render json: { errors: I18n.t('json.creditials_invalid') }, status: :unprocessable_entity
     end
   end
 
