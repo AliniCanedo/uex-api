@@ -42,7 +42,7 @@ RSpec.describe RegistrationsController, type: :controller do
         post :create, params: invalid_params
 
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(JSON.parse(response.body)).to eq({ 'success' => false, 'errors' => { 'email' => ['Não é válido'], 'password_confirmation' => ['Não coincide com a senha'] } })
+        expect(JSON.parse(response.body)).to eq({ 'success' => false, 'errors' => { 'email' => ['E-mail Não é válido'], 'password_confirmation' => ['As senhas não coincidem'] } })
       end
     end
   end

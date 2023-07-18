@@ -6,6 +6,7 @@ FactoryBot.define do
     cep { Faker::Address.zip_code }
     complement { Faker::Address.secondary_address }
     number { Faker::Address.building_number }
+    neighborhood { Faker::Address.community }
     association :contact
   end
 end

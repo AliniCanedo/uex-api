@@ -9,6 +9,7 @@ en:
         street: "Street"
         cep: "ZIP Code"
         number: "Number"
+        neighborhood: "Neighborhood"
     errors:
       models:
         address:
@@ -22,4 +23,6 @@ en:
             cep:
               blank: "Can't be blank"
             number:
+              blank: "Can't be blank"
+            neighborhood:
               blank: "Can't be blank"
