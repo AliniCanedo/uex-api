@@ -34,3 +34,4 @@ pt-BR:
     user_update_error: "Erro ao atualizar seu cadastro."
     user_destroy_success: "Usuário excluído com sucesso."
     user_destroy_error: "Erro ao excluir usuário."
+    creditials_invalid: "Credenciais inválidas."
